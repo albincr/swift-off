@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3EBF86301F8EA694430F7D0D /* Pods_Swift_Off.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E57BE412EF8D2E3254E6E91 /* Pods_Swift_Off.framework */; };
 		83E107101C73EB860017B440 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E1070F1C73EB860017B440 /* AppDelegate.swift */; };
 		83E107121C73EB860017B440 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E107111C73EB860017B440 /* ViewController.swift */; };
 		83E107151C73EB860017B440 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83E107131C73EB860017B440 /* Main.storyboard */; };
@@ -35,6 +36,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2E1724C0546C1A56F771500B /* Pods-Swift Off.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift Off.release.xcconfig"; path = "Pods/Target Support Files/Pods-Swift Off/Pods-Swift Off.release.xcconfig"; sourceTree = "<group>"; };
+		5D91F0A9922008B212FF1072 /* Pods-Swift Off.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift Off.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Swift Off/Pods-Swift Off.debug.xcconfig"; sourceTree = "<group>"; };
+		7E57BE412EF8D2E3254E6E91 /* Pods_Swift_Off.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swift_Off.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83E1070C1C73EB860017B440 /* Swift Off.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swift Off.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		83E1070F1C73EB860017B440 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83E107111C73EB860017B440 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +64,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B137E8DEA3C4A8B857D9F0DF /* Pods.framework in Frameworks */,
+				3EBF86301F8EA694430F7D0D /* Pods_Swift_Off.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				DBC6ACE78D7230E0AD830961 /* Pods.framework */,
+				7E57BE412EF8D2E3254E6E91 /* Pods_Swift_Off.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -147,6 +153,8 @@
 			children = (
 				F0B7C5EC6E65EB25348187D5 /* Pods.debug.xcconfig */,
 				88B1FD0823950B80F76C6B36 /* Pods.release.xcconfig */,
+				5D91F0A9922008B212FF1072 /* Pods-Swift Off.debug.xcconfig */,
+				2E1724C0546C1A56F771500B /* Pods-Swift Off.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -293,7 +301,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Swift Off/Pods-Swift Off-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		51DB2661B12EC087F1A0D805 /* Embed Pods Frameworks */ = {
@@ -308,7 +316,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Swift Off/Pods-Swift Off-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E74C36F42BAE178A31021D78 /* Check Pods Manifest.lock */ = {
@@ -474,7 +482,7 @@
 		};
 		83E107351C73EB870017B440 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F0B7C5EC6E65EB25348187D5 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 5D91F0A9922008B212FF1072 /* Pods-Swift Off.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -490,7 +498,7 @@
 		};
 		83E107361C73EB870017B440 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 88B1FD0823950B80F76C6B36 /* Pods.release.xcconfig */;
+			baseConfigurationReference = 2E1724C0546C1A56F771500B /* Pods-Swift Off.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;

@@ -21,6 +21,7 @@ class ViewController: UIViewController {
 ////
 //        let usersRef = rootFireBaseRef.childByAppendingPath("users")
 //        usersRef.setValue(["user_1": "Charlie"])
+        
 
         // Examples of using NavigationBarView
         prepareNavigationBarViewExample()

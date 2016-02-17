@@ -6,28 +6,31 @@
 //  Copyright © 2016 Primer. All rights reserved.
 //
 
-import AnalyticsSwift
 import UIKit
+import Rollbar
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
-//        Rollbar.initWithAccessToken("STUFF")
-        // Segment Analytics
-        var analytics = Analytics.create("SEGMENT_TOKEN")
-        Analytics.sharedAnalytics().identify
         
-        // This code initializes the Primer SDK: (https://goprimer.com)
-        // Primer handles Signup and Login screens automatically for us
-        // You need to download a token on their website, but once you do, they have a free tier
-        Primer.sharedInstance().registerClientWithToken("INSERT_YOUR_PRIMER_TOKEN")
-        Primer.sharedInstance().requiresLogin = true // use false if you do not want users to signup or login before using the app
         
+        // This code initializes Rollbar Crash/Error Reporting
+        // More information can be found at https://rollbar.com
+        // Replace <ROLLBAR_TOKEN> with the token you get after signing up for Rollbar
+        // Rollbar provides a free tier for use
+        Rollbar.initWithAccessToken("<ROLLBAR_TOKEN>")
+        
+        // This code initializes Primer's Signup and Login Flows
+        // More information can be found at https://goprimer.com
+        // Replace <PRIMER_TOKEN> with the token you get after signing up with Primer
+        // Primer provides a free tier for user
+        // More documentation available here: https://docs.goprimer.com
+        Primer.sharedInstance().requiresLogin = true // ensures users signup or login before accessing app
+        Primer.sharedInstance().registerClientWithToken("<PRIMER_TOKEN>")
         return true
     }
 
