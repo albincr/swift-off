@@ -6,6 +6,7 @@
 //  Copyright © 2016 Primer. All rights reserved.
 //
 
+import AnalyticsSwift
 import UIKit
 
 @UIApplicationMain
@@ -17,6 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
 //        Rollbar.initWithAccessToken("STUFF")
+        // Segment Analytics
+        var analytics = Analytics.create("SEGMENT_TOKEN")
         
         // This code initializes the Primer SDK: (https://goprimer.com)
         // Primer handles Signup and Login screens automatically for us

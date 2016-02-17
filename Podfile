@@ -3,7 +3,7 @@ platform :ios, '8.0'
 use_frameworks!
 
 pod 'Alamofire', '~> 3.0'
-pod 'Analytics'
+pod 'AnalyticsSwift'
 pod 'Dollar'
 pod 'Firebase', '>= 2.5.0'
 pod 'Material', '~> 1.0'
