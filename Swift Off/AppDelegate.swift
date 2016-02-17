@@ -20,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        Rollbar.initWithAccessToken("STUFF")
         // Segment Analytics
         var analytics = Analytics.create("SEGMENT_TOKEN")
+        Analytics.sharedAnalytics().identify
         
         // This code initializes the Primer SDK: (https://goprimer.com)
         // Primer handles Signup and Login screens automatically for us
