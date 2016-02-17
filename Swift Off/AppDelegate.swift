@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  Swift Off
+//  Your App
 //
-//  Created by Christopher Kirk on 2/16/16.
-//  Copyright © 2016 Primer. All rights reserved.
+//  Created by Swift Off Starting Template.
+//  Copyright © 2016 You. All rights reserved.
 //
 
 import UIKit
@@ -15,8 +15,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        
-        
         
         // This code initializes Rollbar Crash/Error Reporting
         // More information can be found at https://rollbar.com

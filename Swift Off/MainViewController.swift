@@ -1,16 +1,16 @@
 //
-//  ViewController.swift
-//  Swift Off
+//  MainViewController.swift
+//  Your App
 //
-//  Created by Christopher Kirk on 2/16/16.
-//  Copyright © 2016 Primer. All rights reserved.
+//  Created by Swift Off Starting Template.
+//  Copyright © 2016 You. All rights reserved.
 //
 
 import UIKit
 import Material
 import Firebase
 
-class ViewController: UIViewController {
+class MainViewController: UIViewController {
     
     @IBOutlet weak var navigationBarView: NavigationBarView!
 

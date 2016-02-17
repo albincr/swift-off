@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		3EBF86301F8EA694430F7D0D /* Pods_Swift_Off.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E57BE412EF8D2E3254E6E91 /* Pods_Swift_Off.framework */; };
 		83E107101C73EB860017B440 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E1070F1C73EB860017B440 /* AppDelegate.swift */; };
-		83E107121C73EB860017B440 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E107111C73EB860017B440 /* ViewController.swift */; };
+		83E107121C73EB860017B440 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E107111C73EB860017B440 /* MainViewController.swift */; };
 		83E107151C73EB860017B440 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83E107131C73EB860017B440 /* Main.storyboard */; };
 		83E107171C73EB860017B440 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83E107161C73EB860017B440 /* Assets.xcassets */; };
 		83E1071A1C73EB860017B440 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83E107181C73EB860017B440 /* LaunchScreen.storyboard */; };
@@ -41,7 +41,7 @@
 		7E57BE412EF8D2E3254E6E91 /* Pods_Swift_Off.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swift_Off.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83E1070C1C73EB860017B440 /* Swift Off.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swift Off.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		83E1070F1C73EB860017B440 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		83E107111C73EB860017B440 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		83E107111C73EB860017B440 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		83E107141C73EB860017B440 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		83E107161C73EB860017B440 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		83E107191C73EB860017B440 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -52,7 +52,7 @@
 		83E1072B1C73EB870017B440 /* Swift OffUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Swift OffUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		83E1072F1C73EB870017B440 /* Swift_OffUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swift_OffUITests.swift; sourceTree = "<group>"; };
 		83E107311C73EB870017B440 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		83E2A3BF1C73F75300C2DAA9 /* Swift Off-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Swift Off-Bridging-Header.h"; sourceTree = "<group>"; };
+		83E2A3BF1C73F75300C2DAA9 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		88B1FD0823950B80F76C6B36 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		DBC6ACE78D7230E0AD830961 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0B7C5EC6E65EB25348187D5 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -85,6 +85,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		83121BC71C7524A900057445 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		83121BC81C7524AF00057445 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				83E107111C73EB860017B440 /* MainViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		83121BC91C7524B900057445 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		83E107031C73EB860017B440 = {
 			isa = PBXGroup;
 			children = (
@@ -110,13 +132,15 @@
 		83E1070E1C73EB860017B440 /* Swift Off */ = {
 			isa = PBXGroup;
 			children = (
+				83121BC91C7524B900057445 /* Models */,
+				83121BC71C7524A900057445 /* Views */,
+				83121BC81C7524AF00057445 /* ViewControllers */,
 				83E1070F1C73EB860017B440 /* AppDelegate.swift */,
-				83E107111C73EB860017B440 /* ViewController.swift */,
 				83E107131C73EB860017B440 /* Main.storyboard */,
 				83E107161C73EB860017B440 /* Assets.xcassets */,
 				83E107181C73EB860017B440 /* LaunchScreen.storyboard */,
 				83E1071B1C73EB860017B440 /* Info.plist */,
-				83E2A3BF1C73F75300C2DAA9 /* Swift Off-Bridging-Header.h */,
+				83E2A3BF1C73F75300C2DAA9 /* Bridging-Header.h */,
 			);
 			path = "Swift Off";
 			sourceTree = "<group>";
@@ -341,7 +365,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83E107121C73EB860017B440 /* ViewController.swift in Sources */,
+				83E107121C73EB860017B440 /* MainViewController.swift in Sources */,
 				83E107101C73EB860017B440 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -491,7 +515,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "primer.Swift-Off";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Swift Off/Swift Off-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Swift Off/Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -507,7 +531,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "primer.Swift-Off";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Swift Off/Swift Off-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Swift Off/Bridging-Header.h";
 			};
 			name = Release;
 		};

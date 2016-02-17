@@ -1,9 +1,9 @@
 //
 //  Swift_OffTests.swift
-//  Swift OffTests
+//  YourAppTests
 //
-//  Created by Christopher Kirk on 2/16/16.
-//  Copyright © 2016 Primer. All rights reserved.
+//  Created by Swift Off Starting Template.
+//  Copyright © 2016 You. All rights reserved.
 //
 
 import XCTest
