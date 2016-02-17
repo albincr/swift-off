@@ -7,7 +7,6 @@
 //
 
 import XCTest
-@testable import Swift_Off
 
 class Swift_OffTests: XCTestCase {
     
