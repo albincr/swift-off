@@ -15,7 +15,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        
+//        Rollbar.initWithAccessToken("STUFF")
+        
+        // This code initializes the Primer SDK: (https://goprimer.com)
+        // Primer handles Signup and Login screens automatically for us
+        // You need to download a token on their website, but once you do, they have a free tier
+        Primer.sharedInstance().registerClientWithToken("INSERT_YOUR_PRIMER_TOKEN")
+        Primer.sharedInstance().requiresLogin = true // use false if you do not want users to signup or login before using the app
+        
         return true
     }
 

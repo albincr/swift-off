@@ -48,6 +48,7 @@
 		83E1072B1C73EB870017B440 /* Swift OffUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Swift OffUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		83E1072F1C73EB870017B440 /* Swift_OffUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swift_OffUITests.swift; sourceTree = "<group>"; };
 		83E107311C73EB870017B440 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83E2A3BF1C73F75300C2DAA9 /* Swift Off-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Swift Off-Bridging-Header.h"; sourceTree = "<group>"; };
 		88B1FD0823950B80F76C6B36 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		DBC6ACE78D7230E0AD830961 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0B7C5EC6E65EB25348187D5 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -110,6 +111,7 @@
 				83E107161C73EB860017B440 /* Assets.xcassets */,
 				83E107181C73EB860017B440 /* LaunchScreen.storyboard */,
 				83E1071B1C73EB860017B440 /* Info.plist */,
+				83E2A3BF1C73F75300C2DAA9 /* Swift Off-Bridging-Header.h */,
 			);
 			path = "Swift Off";
 			sourceTree = "<group>";
@@ -475,11 +477,14 @@
 			baseConfigurationReference = F0B7C5EC6E65EB25348187D5 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Swift Off/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "primer.Swift-Off";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Swift Off/Swift Off-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -488,11 +493,13 @@
 			baseConfigurationReference = 88B1FD0823950B80F76C6B36 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Swift Off/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "primer.Swift-Off";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Swift Off/Swift Off-Bridging-Header.h";
 			};
 			name = Release;
 		};
