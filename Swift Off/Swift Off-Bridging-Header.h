@@ -4,3 +4,4 @@
 
 #import <Analytics/SEGAnalytics.h>
 #import <Primer/Primer.h>
+#import <Firebase/Firebase.h>
