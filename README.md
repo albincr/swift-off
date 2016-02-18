@@ -1,4 +1,6 @@
 # Swift Off :rocket:
+[![Build Status](https://travis-ci.org/goprimer/swift-off.svg?branch=master)](https://travis-ci.org/goprimer/swift-off)
+
 Swift Off is a boilerplate project for Xcode which makes it easy to get started building an iOS app using Swift. It's a great starting point for any new app. We've already included several standard SDKs and setup all the boring stuff, so you can just focus on building the core of your app!
 
 ### What's already built for you:
@@ -58,9 +60,11 @@ pod install
 open Kitty\ Clothes.xcworkspace
 ```
 
-This will install the required libraries, create your xcworkspace and then open it in Xcode.
+This will install the required libraries, create your xcworkspace and then open it in Xcode. You can also open the .xcworkspace file directly from Xcode.
 
-You can always open the xcworkspace file directly from Xcode. Make sure you are opening the .xcworkspace and not your .xcproject or else you're gonna have a bad time.
+Make sure you are opening the .xcworkspace and not your .xcproject or else you're gonna have a bad time.
+
+####
 
 #### Launch Kitty Clothes
 You're done! Now press the Play button in Xcode to build and run your project using one of the Simulators.
