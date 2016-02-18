@@ -16,14 +16,9 @@ class MainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Where to best show this example?
-//        let rootFireBaseRef = Firebase(url: "https://<YOUR-APP-URL>.firebaseio.com/")
-////
-//        let usersRef = rootFireBaseRef.childByAppendingPath("users")
-//        usersRef.setValue(["user_1": "Charlie"])
-        
 
-        // Examples of using NavigationBarView
+        // Presents the Primer Flow
+        Primer.sharedInstance().appLaunchComplete()
         prepareNavigationBarViewExample()
     }
 

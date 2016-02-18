@@ -15,7 +15,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        
         // This code initializes Rollbar Crash/Error Reporting
         // More information can be found at https://rollbar.com
         // Replace <ROLLBAR_TOKEN> with the token you get after signing up for Rollbar
@@ -27,7 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Replace <PRIMER_TOKEN> with the token you get after signing up with Primer
         // Primer provides a free tier for user
         // More documentation available here: https://docs.goprimer.com
-        Primer.sharedInstance().onboardDelegate = LoginManager()
+        Primer.sharedInstance().onboardDelegate = LoginManager.sharedInstance
         Primer.sharedInstance().requiresLogin = true // ensures users signup or login before accessing app
         Primer.sharedInstance().registerClientWithToken("<PRIMER_TOKEN>")
         return true
