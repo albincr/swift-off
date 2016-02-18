@@ -7,7 +7,7 @@ target 'Swift Off' do
   pod 'Analytics'
   pod 'Dollar'
   pod 'Firebase', '>= 2.5.0'
-  pod 'Material', '~> 1.0'
+  pod 'Material', '1.32.2'
   pod 'Rollbar', '~> 0.1.5'
   pod 'Segment-Wootric'
   pod 'Primer'
