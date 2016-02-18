@@ -72,7 +72,7 @@ class LoginManager: NSObject, PMROnboardDelegate  {
 
         print("signup with inputs called!")
 
-        // Here we authenticate with Firebase, and
+        // Sign up with Firebase
         self.fireBaseRef.createUser(email, password: password,
             withValueCompletionBlock: { error, result in
                 if error != nil {

@@ -38,42 +38,22 @@ class SideViewController: UIViewController, UITableViewDataSource, UITableViewDe
         return mycell;
     }
     
-//    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
-//    {
-//        
-////        switch(indexPath.row)
-////        {
-////            
-////        case 0:
-////            
-////            var centerViewController = self.storyboard?.instantiateViewControllerWithIdentifier("ViewController") as ViewController
-////            
-////            var centerNavController = UINavigationController(rootViewController: centerViewController)
-////            
-////            var appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-////            
-////            appDelegate.centerContainer!.centerViewController = centerNavController
-////            
-////            break;
-////            
-////        case 1:
-////            
-////            var aboutViewController = self.storyboard?.instantiateViewControllerWithIdentifier("AboutViewController") as AboutViewController
-////            
-////            var aboutNavController = UINavigationController(rootViewController: aboutViewController)
-////            
-////            var appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate
-////            
-////            appDelegate.centerContainer!.centerViewController = aboutNavController
-////            
-////            break;
-////            
-////        default:
-////            print("stuff")
-////            
-////        }
-//        
-//    }
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        switch(indexPath.row) {
+            case 0:
+//                var centerViewController = self.storyboard?.instantiateViewControllerWithIdentifier("ViewController") as ViewController
+//                var centerNavController = UINavigationController(rootViewController: centerViewController)
+//                var appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+//                appDelegate.centerContainer!.centerViewController = centerNavController
+                break;
+            case 1:
+                sideNavigationViewController?.toggleLeftView()
+                LoginManager.sharedInstance.logoutUser()
+                break;
+            default:
+                print("Did not find menu item.")
+        }
+    }
 
     /*
     // MARK: - Navigation
