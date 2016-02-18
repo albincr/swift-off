@@ -27,6 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Replace <PRIMER_TOKEN> with the token you get after signing up with Primer
         // Primer provides a free tier for user
         // More documentation available here: https://docs.goprimer.com
+        Primer.sharedInstance().onboardDelegate = LoginManager()
         Primer.sharedInstance().requiresLogin = true // ensures users signup or login before accessing app
         Primer.sharedInstance().registerClientWithToken("<PRIMER_TOKEN>")
         return true
