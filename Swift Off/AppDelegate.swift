@@ -6,6 +6,7 @@
 //  Copyright © 2016 You. All rights reserved.
 //
 
+import Material
 import UIKit
 import Rollbar
 
@@ -27,9 +28,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Replace <PRIMER_TOKEN> with the token you get after signing up with Primer
         // Primer provides a free tier for user
         // More documentation available here: https://docs.goprimer.com
-        Primer.sharedInstance().onboardDelegate = LoginManager()
-        Primer.sharedInstance().requiresLogin = true // ensures users signup or login before accessing app
-        Primer.sharedInstance().registerClientWithToken("<PRIMER_TOKEN>")
+//        Primer.sharedInstance().onboardDelegate = LoginManager()
+//        Primer.sharedInstance().requiresLogin = true // ensures users signup or login before accessing app
+//        Primer.sharedInstance().registerClientWithToken("<PRIMER_TOKEN>")
+        
+        // Get view controllers from storyboard
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let mainViewController = storyboard.instantiateViewControllerWithIdentifier("MainViewController") as! MainViewController
+        let sideViewController = storyboard.instantiateViewControllerWithIdentifier("SideViewController") as! SideViewController
+        
+        // Configure the window with the SideNavigationViewController as the root view controller
+        window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        window?.rootViewController = SideNavigationViewController(mainViewController: mainViewController, leftViewController: sideViewController)
+        window?.makeKeyAndVisible()
         return true
     }
 

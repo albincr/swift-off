@@ -73,6 +73,7 @@ class MainViewController: UIViewController {
         btn1.pulseScale = false
         btn1.setImage(img1, forState: .Normal)
         btn1.setImage(img1, forState: .Highlighted)
+        btn1.addTarget(self, action: "openSideView:", forControlEvents: UIControlEvents.TouchDown)
         
         // Star button.
         let img2: UIImage? = UIImage(named: "ic_star_white")
@@ -97,6 +98,10 @@ class MainViewController: UIViewController {
         navigationBarView.rightButtons = [btn2, btn3]
         
         MaterialLayout.height(view, child: navigationBarView, height: 70)
+    }
+    
+    func openSideView(sender:UIButton!) {
+        sideNavigationViewController?.toggleLeftView()
     }
 
 
