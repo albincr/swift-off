@@ -5,10 +5,10 @@ Swift Off is a boilerplate project for Xcode which makes it easy to get started 
 
 ### What's already built for you:
 - Ideal Swift App Structure
-- Base Storyboard & Navigation Bar
+- Base Storyboard and Navigation Bar
 - Beautiful, easy to use UI with [Material](https://github.com/CosmicMind/Material)
-- Analytics Tracking & Integrations with [Segment](https://segment.com)
-- Customizable Signup (Email, Facebook, or Phone #) & Login with [Primer](https://goprimer.com)
+- Analytics Tracking and Integrations with [Segment](https://segment.com)
+- Customizable Signup (Email, Facebook, or Phone #) and Login with [Primer](https://goprimer.com)
 - User (+More) Account Storage with [Firebase](https://www.firebase.com/)
 - Crash & Error Reporting with [Rollbar](https://rollbar.com/)
 - Elegant HTTP interaction with [Alamofire](https://github.com/Alamofire/Alamofire)
@@ -64,7 +64,8 @@ This will install the required libraries, create your xcworkspace and then open 
 
 Make sure you are opening the .xcworkspace and not your .xcproject or else you're gonna have a bad time.
 
-####
+#### Get Firebase Token
+Before you can run your app, you are required to have a free Firebase token. To get one, you'll need to go to https://firebase.com and signup for an account.
 
 #### Launch Kitty Clothes
 You're done! Now press the Play button in Xcode to build and run your project using one of the Simulators.

@@ -9,11 +9,11 @@
 import Foundation
 import Firebase
 
-class LoginManager {
-    let FireBaseRef: Firebase
+class LoginManager: NSObject, PMROnboardDelegate  {
+    let fireBaseRef: Firebase
 
-    init() {
-        self.FireBaseRef = Firebase(url: "https://<YOUR-FIREBASE-APP>.firebaseio.com")
+    override init() {
+        self.fireBaseRef = Firebase(url: "https://<YOUR-FIREBASE-APP>.firebaseio.com")
     }
 
     func logoutUser() {
@@ -22,12 +22,12 @@ class LoginManager {
         Primer.sharedInstance().showLogoutScreen()
 
         // self.loggedInUser = nil;     do we need this? change to swift if so
-        self.FireBaseRef.unauth();
+        self.fireBaseRef.unauth();
     }
 
     func signUpWithInputsFireBase(inputs: [NSObject : AnyObject]!) -> Bool {
         var complete: Bool = false
-        self.FireBaseRef.createUser("bobtony@example.com", password: "correcthorsebatterystaple",
+        self.fireBaseRef.createUser("bobtony@example.com", password: "correcthorsebatterystaple",
             withValueCompletionBlock: { error, result in
             if error != nil {
                 // There was an error creating the firebase account
@@ -43,7 +43,7 @@ class LoginManager {
 
     func loginWithInputsFireBase(inputs: [NSObject : AnyObject]!) -> Bool {
         var complete: Bool = false
-        self.FireBaseRef.authUser("bobtony@example.com", password: "correcthorsebatterystaple",
+        self.fireBaseRef.authUser("bobtony@example.com", password: "correcthorsebatterystaple",
             withCompletionBlock: { error, authData in
             if error != nil {
                 // There was an error logging in to this account
