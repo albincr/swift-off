@@ -45,7 +45,7 @@ class MainViewController: UIViewController {
         
         // Title label.
         let titleLabel: UILabel = UILabel()
-        titleLabel.text = "Material!"
+        titleLabel.text = "Swift Off!"
         titleLabel.textAlignment = .Left
         titleLabel.textColor = MaterialColor.white
         titleLabel.font = RobotoFont.regularWithSize(20)
@@ -54,7 +54,7 @@ class MainViewController: UIViewController {
         
         // Detail label.
         let detailLabel: UILabel = UILabel()
-        detailLabel.text = "Build Beautiful Software"
+        detailLabel.text = "Build Beautiful Apps"
         detailLabel.textAlignment = .Left
         detailLabel.textColor = MaterialColor.white
         detailLabel.font = RobotoFont.regularWithSize(12)
@@ -70,27 +70,19 @@ class MainViewController: UIViewController {
         btn1.setImage(img1, forState: .Highlighted)
         btn1.addTarget(self, action: "openSideView:", forControlEvents: UIControlEvents.TouchDown)
         
-        // Star button.
-        let img2: UIImage? = UIImage(named: "ic_star_white")
+        // Search button.
+        let img3: UIImage? = UIImage(named: "ic_search_white")
         let btn2: FlatButton = FlatButton()
         btn2.pulseColor = MaterialColor.white
         btn2.pulseScale = false
-        btn2.setImage(img2, forState: .Normal)
-        btn2.setImage(img2, forState: .Highlighted)
-        
-        // Search button.
-        let img3: UIImage? = UIImage(named: "ic_search_white")
-        let btn3: FlatButton = FlatButton()
-        btn3.pulseColor = MaterialColor.white
-        btn3.pulseScale = false
-        btn3.setImage(img3, forState: .Normal)
-        btn3.setImage(img3, forState: .Highlighted)
+        btn2.setImage(img3, forState: .Normal)
+        btn2.setImage(img3, forState: .Highlighted)
         
         // Add buttons to left side.
         navigationBarView.leftButtons = [btn1]
         
         // Add buttons to right side.
-        navigationBarView.rightButtons = [btn2, btn3]
+        navigationBarView.rightButtons = [btn2]
         
         MaterialLayout.height(view, child: navigationBarView, height: 70)
     }
