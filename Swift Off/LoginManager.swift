@@ -65,6 +65,21 @@ class LoginManager: NSObject, PMROnboardDelegate  {
         completionBlock(result)
     }
 
+    func recoverWithInputsPrimer(inputs: [NSObject : AnyObject]!, completionBlock: PMRValidityResultBlock!, recoverComplete: Bool) {
+        let result = PMRValidityResult()
+
+        if recoverComplete {
+            result.isValid = true
+        } else {
+            result.isValid = false
+            result.errorMessage = "There was an issue with recovering your password."
+        }
+
+        // Always call the completion block
+        completionBlock(result)
+    }
+
+
     // Our sign up screens with Primer will call this method on sign up.
     func signupWithInputs(inputs: [NSObject : AnyObject]!, completionBlock: PMRValidityResultBlock!) {
         let email = inputs["email"] as? String
@@ -100,13 +115,24 @@ class LoginManager: NSObject, PMROnboardDelegate  {
             withCompletionBlock: { error, authData in
                 if error != nil {
                     // There was an error logging in to this account
-                    print(error)
-                    print("FB signup error")
                     self.loginWithInputsPrimer(inputs, completionBlock: completionBlock, loginComplete: false)
                 } else {
                     // We are now logged in
                     self.loginWithInputsPrimer(inputs, completionBlock: completionBlock, loginComplete: true)
                 }
+        })
+    }
+
+    func recoverWithInputs(inputs: [NSObject : AnyObject]!, completionBlock: PMRValidityResultBlock!) {
+
+        let email = inputs["email"] as? String
+
+        self.fireBaseRef.resetPasswordForUser(email, withCompletionBlock: { error in
+            if error != nil {
+                self.recoverWithInputsPrimer(inputs, completionBlock: completionBlock, recoverComplete: false)
+            } else {
+                self.recoverWithInputsPrimer(inputs, completionBlock: completionBlock, recoverComplete: true)
+            }
         })
     }
 }
