@@ -54,7 +54,7 @@ class MainViewController: UIViewController {
         
         // Detail label.
         let detailLabel: UILabel = UILabel()
-        detailLabel.text = "Build Beautiful Apps"
+        detailLabel.text = "Build Great Apps"
         detailLabel.textAlignment = .Left
         detailLabel.textColor = MaterialColor.white
         detailLabel.font = RobotoFont.regularWithSize(12)
