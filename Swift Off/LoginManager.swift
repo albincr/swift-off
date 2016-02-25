@@ -13,7 +13,7 @@ class LoginManager: NSObject, PMROnboardDelegate  {
     let fireBaseRef: Firebase
 
     override init() {
-        self.fireBaseRef = Firebase(url: "https://dazzling-torch-8898.firebaseio.com")
+        self.fireBaseRef = Firebase(url: "https://<FIREBASE_URL>.firebaseio.com")
     }
 
     // LoginManager can be used as singleton for the whole app
