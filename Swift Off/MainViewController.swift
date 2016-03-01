@@ -10,10 +10,14 @@ import UIKit
 import Material
 import Firebase
 
+// Be sure to change this URL. Your app will crash otherwise.
+let FIREBASE_BASE_URL = "https://dazzling-torch-8898.firebaseio.com"
+
 class MainViewController: UIViewController {
     
     @IBOutlet weak var navigationBarView: NavigationBarView!
 
+    // Tasks to run after the main view has loaded
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,18 +26,11 @@ class MainViewController: UIViewController {
         prepareNavigationBarViewExample()
     }
 
-    /**
-     :name:	prepareView
-     :description: General preparation statements.
-     */
+    // General tasks to prepare view to be shown.
     private func prepareView() {
         view.backgroundColor = MaterialColor.white
     }
-    
-    /**
-     :name:	prepareNavigationBarViewExample
-     :description:	General usage example.
-     */
+
     func prepareNavigationBarViewExample() {
         
         // Stylize.
@@ -44,7 +41,7 @@ class MainViewController: UIViewController {
         navigationBarView.statusBarStyle = .LightContent
         
         // Title label.
-        let titleLabel: UILabel = UILabel()
+        let titleLabel = UILabel()
         titleLabel.text = "Swift Off!"
         titleLabel.textAlignment = .Left
         titleLabel.textColor = MaterialColor.white
@@ -53,7 +50,7 @@ class MainViewController: UIViewController {
         navigationBarView.titleLabelInset.left = 64
         
         // Detail label.
-        let detailLabel: UILabel = UILabel()
+        let detailLabel = UILabel()
         detailLabel.text = "Build Great Apps"
         detailLabel.textAlignment = .Left
         detailLabel.textColor = MaterialColor.white
@@ -62,27 +59,27 @@ class MainViewController: UIViewController {
         navigationBarView.detailLabelInset.left = 64
         
         // Menu button.
-        let img1: UIImage? = UIImage(named: "ic_menu_white")
-        let btn1: FlatButton = FlatButton()
-        btn1.pulseColor = MaterialColor.white
-        btn1.pulseScale = false
-        btn1.setImage(img1, forState: .Normal)
-        btn1.setImage(img1, forState: .Highlighted)
-        btn1.addTarget(self, action: "openSideView:", forControlEvents: UIControlEvents.TouchDown)
+        let menuButtonImage = UIImage(named: "ic_menu_white")
+        let menuButton: FlatButton = FlatButton()
+        menuButton.pulseColor = MaterialColor.white
+        menuButton.pulseScale = false
+        menuButton.setImage(menuButtonImage, forState: .Normal)
+        menuButton.setImage(menuButtonImage, forState: .Highlighted)
+        menuButton.addTarget(self, action: "openSideView:", forControlEvents: .TouchUpInside)
         
         // Search button.
-        let img3: UIImage? = UIImage(named: "ic_search_white")
-        let btn2: FlatButton = FlatButton()
-        btn2.pulseColor = MaterialColor.white
-        btn2.pulseScale = false
-        btn2.setImage(img3, forState: .Normal)
-        btn2.setImage(img3, forState: .Highlighted)
+        let searchButtonImage = UIImage(named: "ic_search_white")
+        let searchButton: FlatButton = FlatButton()
+        searchButton.pulseColor = MaterialColor.white
+        searchButton.pulseScale = false
+        searchButton.setImage(searchButtonImage, forState: .Normal)
+        searchButton.setImage(searchButtonImage, forState: .Highlighted)
         
         // Add buttons to left side.
-        navigationBarView.leftButtons = [btn1]
+        navigationBarView.leftButtons = [menuButton]
         
         // Add buttons to right side.
-        navigationBarView.rightButtons = [btn2]
+        navigationBarView.rightButtons = [searchButton]
         
         MaterialLayout.height(view, child: navigationBarView, height: 70)
     }

@@ -13,7 +13,7 @@ class LoginManager: NSObject, PMROnboardDelegate  {
     let fireBaseRef: Firebase
 
     override init() {
-        self.fireBaseRef = Firebase(url: "https://<FIREBASE_URL>.firebaseio.com")
+        self.fireBaseRef = Firebase(url: FIREBASE_BASE_URL)
     }
 
     // LoginManager can be used as singleton for the whole app
@@ -29,7 +29,6 @@ class LoginManager: NSObject, PMROnboardDelegate  {
         Primer.sharedInstance().logoutUser()
         Primer.sharedInstance().showLogoutScreen()
 
-        // self.loggedInUser = nil;     do we need this? change to swift if so
         self.fireBaseRef.unauth();
     }
 
@@ -45,7 +44,6 @@ class LoginManager: NSObject, PMROnboardDelegate  {
             result.errorMessage = "There was an issue signing up."
         }
 
-        // Always call the completion block
         completionBlock(result)
     }
 
@@ -61,7 +59,6 @@ class LoginManager: NSObject, PMROnboardDelegate  {
             result.errorMessage = "There was an issue logging in."
         }
 
-        // Always call the completion block
         completionBlock(result)
     }
 
@@ -75,7 +72,6 @@ class LoginManager: NSObject, PMROnboardDelegate  {
             result.errorMessage = "There was an issue with recovering your password."
         }
 
-        // Always call the completion block
         completionBlock(result)
     }
 
@@ -84,8 +80,6 @@ class LoginManager: NSObject, PMROnboardDelegate  {
     func signupWithInputs(inputs: [NSObject : AnyObject]!, completionBlock: PMRValidityResultBlock!) {
         let email = inputs["email"] as? String
         let password = inputs["password"] as? String
-
-        print("signup with inputs called!")
 
         // Sign up with Firebase
         self.fireBaseRef.createUser(email, password: password,
@@ -104,10 +98,8 @@ class LoginManager: NSObject, PMROnboardDelegate  {
         })
     }
 
-    // Our sign up screens with Primer will call this method when a user logs in with email and password.
+    // Our Primer sign up screens will call this method when a user logs in with email and password.
     func loginWithInputs(inputs: [NSObject : AnyObject]!, completionBlock: PMRValidityResultBlock!) {
-        print("login with inputs called!")
-
         let email = inputs["email"] as? String
         let password = inputs["password"] as? String
         
@@ -123,8 +115,8 @@ class LoginManager: NSObject, PMROnboardDelegate  {
         })
     }
 
+    // Our Primer password recovery screen will call this method when a user requests a password reset
     func recoverWithInputs(inputs: [NSObject : AnyObject]!, completionBlock: PMRValidityResultBlock!) {
-
         let email = inputs["email"] as? String
 
         self.fireBaseRef.resetPasswordForUser(email, withCompletionBlock: { error in

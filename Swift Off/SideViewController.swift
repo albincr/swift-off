@@ -10,7 +10,7 @@ import UIKit
 import Material
 
 class SideViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    
+
     var menuItemText: [String] = ["Settings", "Logout"]
     var menuItemIcons: [String] = ["ic_settings", "ic_exit"]
     
@@ -43,12 +43,10 @@ class SideViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         switch(indexPath.row) {
         case 0:
-            //                var centerViewController = self.storyboard?.instantiateViewControllerWithIdentifier("ViewController") as ViewController
-            //                var centerNavController = UINavigationController(rootViewController: centerViewController)
-            //                var appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-            //                appDelegate.centerContainer!.centerViewController = centerNavController
+            // You can add code for opening a settings view here.
             break;
         case 1:
+            // logout button tapped
             sideNavigationViewController?.toggleLeftView()
             LoginManager.sharedInstance.logoutUser()
             break;
@@ -56,16 +54,6 @@ class SideViewController: UIViewController, UITableViewDataSource, UITableViewDe
             print("Did not find menu item.")
         }
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    // Get the new view controller using segue.destinationViewController.
-    // Pass the selected object to the new view controller.
-    }
-    */
 
     func prepareSideMenu() {
         // Adding a menu icon for closing the menu
@@ -75,7 +63,7 @@ class SideViewController: UIViewController, UITableViewDataSource, UITableViewDe
         menuBtn.pulseScale = false
         menuBtn.setImage(menuImg, forState: .Normal)
         menuBtn.setImage(menuImg, forState: .Highlighted)
-        menuBtn.addTarget(self, action: "closeSideView:", forControlEvents: UIControlEvents.TouchUpInside)
+        menuBtn.addTarget(self, action: "closeSideView:", forControlEvents: .TouchUpInside)
         view.addSubview(menuBtn)
     }
     
