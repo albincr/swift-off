@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Swift Off iOS App Start Boilerplate by goprimer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Swift Off iOS App Start Boilerplate</h1>
+      <h2 class="project-tagline">iOS Boilerplate project which includes the best SDKs to quickly build a swift app without all the hassle</h2>
+      <a href="https://github.com/goprimer/swift-off" class="btn">View on GitHub</a>
+      <a href="https://github.com/goprimer/swift-off/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/goprimer/swift-off/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="swift-off-rocket" class="anchor" href="#swift-off-rocket" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Swift Off <img class="emoji" title=":rocket:" alt=":rocket:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f680.png" height="20" width="20" align="absmiddle">
+</h1>
+
+<p><a href="https://travis-ci.org/goprimer/swift-off"><img src="https://travis-ci.org/goprimer/swift-off.svg?branch=master" alt="Build Status"></a></p>
+
+<p>Swift Off is a boilerplate project for Xcode which makes it easy to get started building an iOS app using Swift. It's a great starting point for any new app. We've already included several standard SDKs and setup all the boring stuff, so you can just focus on building the core of your app!</p>
+
+<h3>
+<a id="whats-already-built-for-you" class="anchor" href="#whats-already-built-for-you" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>What's already built for you:</h3>
+
+<ul>
+<li>Ideal Swift App Structure</li>
+<li>Base Storyboard and Navigation Bar</li>
+<li>Beautiful, easy to use UI with <a href="https://github.com/CosmicMind/Material">Material</a>
+</li>
+<li>Customizable Signup (Email, Facebook, or Phone #) and Login with <a href="https://goprimer.com">Primer</a>
+</li>
+<li>User (+More) Account Storage with <a href="https://www.firebase.com/">Firebase</a>
+</li>
+<li>Crash &amp; Error Reporting with <a href="https://rollbar.com/">Rollbar</a>
+</li>
+<li>Elegant HTTP interaction with <a href="https://github.com/Alamofire/Alamofire">Alamofire</a>
+</li>
+<li>Functional tool-belt for Swift with <a href="https://github.com/ankurp/Dollar">Dollar</a>
+</li>
+<li>Ability to easily include future SDKs with <a href="https://cocoapods.org/">Cocoapods</a>
+</li>
+</ul>
+
+<p>We put this together because we wanted a great starting point for working on side projects or test apps. We also got tired of rebuilding all this stuff ourselves and thought it was a great way to showcase the correct structure of a standard Swift app.</p>
+
+<h2>
+<a id="requirements" class="anchor" href="#requirements" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Requirements</h2>
+
+<h4>
+<a id="cocoapods" class="anchor" href="#cocoapods" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Cocoapods</h4>
+
+<p>You'll need to have Cocoapods installed on your computer to install the external SDKs. Trust us, it's one of the best ways to manage external SDKs in your app.</p>
+
+<div class="highlight highlight-source-shell"><pre>sudo gem install cocoapods</pre></div>
+
+<p>You'll need CocoaPods version 0.36+, so if you're using an older version, you can update by running the command above. More installation instructions can be found <a href="https://guides.cocoapods.org/using/getting-started.html#getting-started">here</a>.</p>
+
+<h4>
+<a id="xcode-72" class="anchor" href="#xcode-72" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Xcode 7.2+</h4>
+
+<h2>
+<a id="getting-started" class="anchor" href="#getting-started" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Getting Started</h2>
+
+<h4>
+<a id="1-download-and-open-the-project" class="anchor" href="#1-download-and-open-the-project" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>1. Download and Open the Project</h4>
+
+<p>Download and extract the latest project <a href="archive/master.zip">zip</a>, or using git to clone the repository. In your terminal, type:</p>
+
+<pre><code>git clone https://github.com/goprimer/swift-off.git
+</code></pre>
+
+<p>Next, open the terminal and navigate to the Swift Off directory. Once there, run</p>
+
+<pre><code>pod install
+</code></pre>
+
+<p>This will install all the project’s dependencies. Now you can open the project in XCode with</p>
+
+<pre><code>open Swift\ Off.xcworkspace/
+</code></pre>
+
+<p>Your XCode Project should resemble the screenshot below.</p>
+
+<p><img src="https://i.imgur.com/tweKfSq.png" alt="Project structure"></p>
+
+<h4>
+<a id="2-getting-a-firebase-url" class="anchor" href="#2-getting-a-firebase-url" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>2. Getting a Firebase URL</h4>
+
+<p>Firebase will allow us to save our app data, all we need to do is sign up for a free account. Sign up a for free account, and Firebase will give you a URL to interact with your data store. Paste your firebase url in the MainViewController, shown in the screenshot below.</p>
+
+<p><img src="http://i.imgur.com/j8m15in.png" alt="Where to change Firebase URL in LoginManager.swift"></p>
+
+<p>Swift Off will now compile and run without issues.</p>
+
+<h4>
+<a id="3-welcome-screens" class="anchor" href="#3-welcome-screens" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>3. Welcome Screens</h4>
+
+<p>Swift Off uses Primer for welcome, login, and sign up screens. Swift Off already includes these screens by default to get you started, but it's recommended to get your own Primer token so that you can customize your screens to your liking.</p>
+
+<p><img src="https://i.imgur.com/6kFXW4r.png" height="400"><img src="https://i.imgur.com/ILlsLQb.png" height="400">
+<sup>Welcome screen and our main interface out of the box</sup></p>
+
+<p><a href="http://goprimer.com/dashboard#/signup?swiftOff=true" target="_blank">Navigate here</a> and sign up for a free account. As soon as we log in, we should see our welcome screens. We can click on a screen to edit it, but for now let's just copy our token from the top left of the page and paste it into our code. If we ever need to find our token again, it can be found in Primer's <a href="https://goprimer.com/dashboard#/project//edit" target="_blank">project settings page</a>.</p>
+
+<p><img src="http://imgur.com/Z04COXD.png" alt="Getting our Primer token"></p>
+
+<p>In <code>AppDelegate.swift</code>, there are a few lines of code that initialize Primer. Paste your primer token at the appropriate line.</p>
+
+<div class="highlight highlight-source-swift"><pre>Primer<span class="pl-k">.</span>sharedInstance()<span class="pl-k">.</span>onboardDelegate <span class="pl-k">=</span> LoginManager<span class="pl-k">.</span>sharedInstance
+Primer<span class="pl-k">.</span>sharedInstance()<span class="pl-k">.</span>requiresLogin <span class="pl-k">=</span> <span class="pl-c1">true</span>
+Primer<span class="pl-k">.</span>sharedInstance()<span class="pl-k">.</span>registerClientWithToken(“<span class="pl-k">&lt;</span>PRIMER_TOKEN<span class="pl-k">&gt;</span>”) <span class="pl-c">// Primer token here!</span></pre></div>
+
+<h4>
+<a id="4-rename-your-project" class="anchor" href="#4-rename-your-project" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>4. Rename your project</h4>
+
+<p>Of course you want the app to be named something awesome! You can easily rename the Swift Off template app.</p>
+
+<p>In this example let's assume you are naming your app: <strong>Kitty Clothes</strong></p>
+
+<ol>
+<li>Unzip <code>swift-off-master.zip</code> and rename the folder to <code>kitty-clothes</code>.</li>
+<li>Open your <code>Swift Off.xcproject</code> file in Xcode (inside <code>kitty-clothes/</code>).</li>
+<li>Follow Apple's <a href="https://developer.apple.com/library/ios/recipes/xcode_help-project_editor/RenamingaProject/RenamingaProject.html">guide to renaming projects</a>.</li>
+<li>Rename your Bundle Identifier in XCode settings.</li>
+<li>Quit Xcode.</li>
+<li>
+<p>Update your Podfile target:</p>
+
+<p>Use terminal (<code>vim Podfile</code>) or your favorite text editor:</p>
+
+<p>Change: <code>target 'Swift Off' do</code> to <code>target 'Kitty Clothes' do</code></p>
+</li>
+</ol>
+
+<h4>
+<a id="create-xcode-workspace" class="anchor" href="#create-xcode-workspace" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Create XCode Workspace</h4>
+
+<p>Cocoapods creates a .xcworkspace which includes all the required SDKs bundled with your future app!</p>
+
+<div class="highlight highlight-source-shell"><pre><span class="pl-c1">cd</span> kitty-clothes/
+pod install
+open Kitty<span class="pl-cce">\ </span>Clothes.xcworkspace</pre></div>
+
+<p>This will install the required libraries, create your xcworkspace and then open it in Xcode. You can also open the .xcworkspace file directly from Xcode.</p>
+
+<p>Make sure you are opening the .xcworkspace and not your .xcproject or else you're gonna have a bad time.</p>
+
+<h4>
+<a id="get-firebase-token" class="anchor" href="#get-firebase-token" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Get Firebase Token</h4>
+
+<p>Before you can run your app, you are required to have a free Firebase token. To get one, you'll need to go to <a href="https://firebase.com">https://firebase.com</a> and signup for an account.</p>
+
+<h4>
+<a id="launch-kitty-clothes" class="anchor" href="#launch-kitty-clothes" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Launch Kitty Clothes</h4>
+
+<p>You're done! Now press the Play button in Xcode to build and run your project using one of the Simulators.</p>
+
+<p>You should see a cute Kitten greeting you on your Install screen with options to signup or login. Once you go through the Signup flow, you'll see your application running with a navigation bar and side menu.</p>
+
+<h2>
+<a id="whats-next" class="anchor" href="#whats-next" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>What's Next?</h2>
+
+<p>Now you can get to work building your amazing app!</p>
+
+<p>We've written a tutorial on how to build... and you can find it...</p>
+
+<h2>
+<a id="live-apps-built-with-swift-off" class="anchor" href="#live-apps-built-with-swift-off" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Live Apps built with Swift Off</h2>
+
+<p>None yet <img class="emoji" title=":cry:" alt=":cry:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f622.png" height="20" width="20" align="absmiddle">. Is your app live and built from Swift Off? Create a PR and add it here!</p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/goprimer/swift-off">Swift Off iOS App Start Boilerplate</a> is maintained by <a href="https://github.com/goprimer">goprimer</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
