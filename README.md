@@ -32,11 +32,52 @@ You'll need CocoaPods version 0.36+, so if you're using an older version, you ca
 
 ## Getting Started
 
-#### Download the Project
-Download the Swift Off boilerplate app by using the [zip](archive/master.zip).
+#### 1. Download and Open the Project
+Download and extract the latest project [zip](archive/master.zip), or using git to clone the repository. In your terminal, type:
 
-#### Rename your project
-Of course you want the app to be named something awesome! You can easily rename the Swift Off template app to whatever you want.
+    git clone https://github.com/goprimer/swift-off.git
+
+Next, open the terminal and navigate to the Swift Off directory. Once there, run
+
+    pod install
+
+This will install all the project’s dependencies. Now you can open the project in XCode with
+
+    open Swift\ Off.xcworkspace/
+
+Your XCode Project should resemble the screenshot below.
+
+![Project structure](https://i.imgur.com/tweKfSq.png)
+
+#### 2. Getting a Firebase URL
+
+Firebase will allow us to save our app data, all we need to do is sign up for a free account. Sign up a for free account, and Firebase will give you a URL to interact with your data store. Paste your firebase url in the MainViewController, shown in the screenshot below.
+
+![Where to change Firebase URL in LoginManager.swift](http://i.imgur.com/j8m15in.png)
+
+Swift Off will now compile and run without issues.
+
+#### 3. Welcome Screens
+
+Swift Off uses Primer for welcome, login, and sign up screens. Swift Off already includes these screens by default to get you started, but it's recommended to get your own Primer token so that you can customize your screens to your liking.
+
+<img src="https://i.imgur.com/6kFXW4r.png" height="400"/><img src="https://i.imgur.com/ILlsLQb.png" height="400"/>
+<sup>Welcome screen and our main interface out of the box</sup>
+
+<a href="http://goprimer.com/dashboard#/signup?swiftOff=true" target="_blank">Navigate here</a> and sign up for a free account. As soon as we log in, we should see our welcome screens. We can click on a screen to edit it, but for now let's just copy our token from the top left of the page and paste it into our code. If we ever need to find our token again, it can be found in Primer's <a href="https://goprimer.com/dashboard#/project//edit" target="_blank">project settings page</a>.
+
+![Getting our Primer token](http://imgur.com/Z04COXD.png)
+
+In `AppDelegate.swift`, there are a few lines of code that initialize Primer. Paste your primer token at the appropriate line.
+
+```swift
+Primer.sharedInstance().onboardDelegate = LoginManager.sharedInstance
+Primer.sharedInstance().requiresLogin = true
+Primer.sharedInstance().registerClientWithToken(“<PRIMER_TOKEN>”) // Primer token here!
+```
+
+#### 4. Rename your project
+Of course you want the app to be named something awesome! You can easily rename the Swift Off template app.
 
 In this example let's assume you are naming your app: **Kitty Clothes**
 
