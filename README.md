@@ -47,7 +47,7 @@ This will install all the project’s dependencies. Now you can open the project
 
 Your XCode Project should resemble the screenshot below.
 
-!!!!PICS
+![Project structure](https://i.imgur.com/tweKfSq.png)
 
 #### 2. Getting a Firebase URL
 
