@@ -62,6 +62,7 @@ Swift Off will now compile and run without issues.
 Swift Off uses Primer for welcome, login, and sign up screens. Swift Off already includes these screens by default to get you started, but it's recommended to get your own Primer token so that you can customize your screens to your liking.
 
 <img src="https://i.imgur.com/6kFXW4r.png" height="400"/><img src="https://i.imgur.com/ILlsLQb.png" height="400"/>
+
 <sup>Welcome screen and our main interface out of the box</sup>
 
 <a href="http://goprimer.com/dashboard#/signup?swiftOff=true" target="_blank">Navigate here</a> and sign up for a free account. As soon as we log in, we should see our welcome screens. We can click on a screen to edit it, but for now let's just copy our token from the top left of the page and paste it into our code. If we ever need to find our token again, it can be found in Primer's <a href="https://goprimer.com/dashboard#/project//edit" target="_blank">project settings page</a>.
