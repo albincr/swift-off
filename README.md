@@ -1,5 +1,4 @@
-# Swift Off :rocket:
-[![Build Status](https://travis-ci.org/goprimer/swift-off.svg?branch=master)](https://travis-ci.org/goprimer/swift-off)
+# [Swift Off :rocket:](http://goprimer.github.io/swift-off/)
 
 Swift Off is a boilerplate project for Xcode which makes it easy to get started building an iOS app using Swift. It's a great starting point for any new app. We've already included several standard SDKs and setup all the boring stuff, so you can just focus on building the core of your app!
 
@@ -7,7 +6,6 @@ Swift Off is a boilerplate project for Xcode which makes it easy to get started 
 - Ideal Swift App Structure
 - Base Storyboard and Navigation Bar
 - Beautiful, easy to use UI with [Material](https://github.com/CosmicMind/Material)
-- Analytics Tracking and Integrations with [Segment](https://segment.com)
 - Customizable Signup (Email, Facebook, or Phone #) and Login with [Primer](https://goprimer.com)
 - User (+More) Account Storage with [Firebase](https://www.firebase.com/)
 - Crash & Error Reporting with [Rollbar](https://rollbar.com/)
@@ -105,9 +103,6 @@ This will install the required libraries, create your xcworkspace and then open 
 
 Make sure you are opening the .xcworkspace and not your .xcproject or else you're gonna have a bad time.
 
-#### Get Firebase Token
-Before you can run your app, you are required to have a free Firebase token. To get one, you'll need to go to https://firebase.com and signup for an account.
-
 #### Launch Kitty Clothes
 You're done! Now press the Play button in Xcode to build and run your project using one of the Simulators.
 
@@ -116,7 +111,7 @@ You should see a cute Kitten greeting you on your Install screen with options to
 ## What's Next?
 Now you can get to work building your amazing app!
 
-We've written a tutorial on how to build... and you can find it...
+We've written a [tutorial on how to build a To do app here](https://github.com/goprimer/swift-off/wiki/Awesome-To-Do-App-Tutorial).
 
 ## Live Apps built with Swift Off
 None yet :cry:. Is your app live and built from Swift Off? Create a PR and add it here!
