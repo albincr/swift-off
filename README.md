@@ -1,6 +1,6 @@
 # [Swift Off :rocket:](http://goprimer.github.io/swift-off/)
 
-Swift Off is a boilerplate project for Xcode which makes it easy to get started building an iOS app using Swift. It's a great starting point for any new app. We've already included several standard SDKs and setup all the boring stuff, so you can just focus on building the core of your app!
+Swift Off is a boilerplate template for Xcode which makes it easy to get started building an iOS app using Swift. It's a great starting point for any new app. We've already included several standard SDKs and setup all the boring stuff, so you can just focus on building the core of your app!
 
 ### What's already built for you:
 - Ideal Swift App Structure
