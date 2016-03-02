@@ -11,7 +11,7 @@ import Material
 import Firebase
 
 // Be sure to change this URL. Your app will crash otherwise.
-let FIREBASE_BASE_URL = "https://dazzling-torch-8898.firebaseio.com"
+let FIREBASE_BASE_URL = "https://<UNIQUE_FIREBASE_URL>.firebaseio.com"
 
 class MainViewController: UIViewController {
     
