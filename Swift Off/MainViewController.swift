@@ -22,8 +22,8 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
 
         // Presents the Primer Flow
-        Primer.sharedInstance().appLaunchComplete()
         prepareNavigationBarViewExample()
+        Primer.presentExperience()
     }
 
     // General tasks to prepare view to be shown.
