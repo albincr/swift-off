@@ -42,13 +42,15 @@ class LoginManager: NSObject, PMRExperienceDelegate  {
     }
     
     func loginWithInputsPrimer(inputs: [String : AnyObject]!, completionBlock: PMRUserValidationBlock!, loginComplete: Bool) {
+        let result = PMRValidationResult()
         if loginComplete {
-            completionBlock(nil, inputs["email"] as? String)
+//            completionBlock(nil, inputs["email"] as? String)
         } else {
-            let result = PMRValidationResult()
+//            let result = PMRValidationResult()
             result.invalidateWithErrorMessage("There was an issue logging in.")
-            completionBlock(result, nil)
+//            completionBlock(result, nil)
         }
+        completionBlock(result, inputs["email"] as? String)
     }
     
     func recoverWithInputsPrimer(inputs: [String : AnyObject]!, completionBlock: PMRValidationBlock!, recoverComplete: Bool) {
