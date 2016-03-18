@@ -17,12 +17,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // This code initializes Primer's Signup and Login Flows
         // More information can be found at https://goprimer.com
-        // Replace <PRIMER_TOKEN> with the token you get after signing up with Primer
+        // Replace <PRIMER_TOKEN> in your Info.plist file
         // Primer provides a free tier for user
         // More documentation available here: https://docs.goprimer.com
         Primer.setExperienceDelegate(LoginManager.sharedInstance)
         Primer.setRequiresLogin(true)
-        Primer.setLoggingLevel(.Debug)
         Primer.start()
         
         // Get view controllers from storyboard
