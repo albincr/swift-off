@@ -8,7 +8,6 @@ Swift Off is a boilerplate template for Xcode which makes it easy to get started
 - Beautiful, easy to use UI with [Material](https://github.com/CosmicMind/Material)
 - Customizable Signup (Email, Facebook, or Phone #) and Login with [Primer](https://goprimer.com)
 - User (+More) Account Storage with [Firebase](https://www.firebase.com/)
-- Crash & Error Reporting with [Rollbar](https://rollbar.com/)
 - Elegant HTTP interaction with [Alamofire](https://github.com/Alamofire/Alamofire)
 - Functional tool-belt for Swift with [Dollar](https://github.com/ankurp/Dollar)
 - Ability to easily include future SDKs with [Cocoapods](https://cocoapods.org/)

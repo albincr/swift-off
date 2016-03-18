@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>PrimerToken</key>
-	<string>PRIMER_TOKEN_HERE</string>
+	<string>&lt;YOUR_PRIMER_TOKEN&gt;</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>

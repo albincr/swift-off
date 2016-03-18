@@ -15,12 +15,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // This code initializes Rollbar Crash/Error Reporting
-        // More information can be found at https://rollbar.com
-        // Replace <ROLLBAR_TOKEN> with the token you get after signing up for Rollbar
-        // Rollbar provides a free tier for use
-//        Rollbar.initWithAccessToken("<ROLLBAR_TOKEN>")
-        
         // This code initializes Primer's Signup and Login Flows
         // More information can be found at https://goprimer.com
         // Replace <PRIMER_TOKEN> with the token you get after signing up with Primer

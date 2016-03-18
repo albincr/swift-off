@@ -1,3 +1,4 @@
+
 //
 //  MainViewController.swift
 //  Your App
@@ -23,6 +24,9 @@ class MainViewController: UIViewController {
 
         // Presents the Primer Flow
         prepareNavigationBarViewExample()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
         Primer.presentExperience()
     }
 
